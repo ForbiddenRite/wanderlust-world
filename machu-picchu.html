@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="History, travel tips, and visitor guide for Machu Picchu in Peru." data-i18n-attr="content:machu.metaDescription"
+    />
+    <title data-i18n="machu.metaTitle">Machu Picchu | Wanderlust World</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="./image/wanderlust.png" type="image/png" />
+
+    <link
+      rel="preload"
+      href="./image/optimized/machu-picchu.webp"
+      as="image"
+      fetchpriority="high"
+      media="(min-width: 768px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./image/optimized/machu-picchu-mobile.webp"
+      media="(max-width: 767px)"
+      fetchpriority="high"
+    />
+    <script src="./js/theme.js"></script>
+    <script src="./js/lang.js"></script>
+    <link rel="stylesheet" href="./css/styles.css?v=20261014-9" />
+  </head>
+  <body id="top" class="page-machu-picchu">
+    <a class="skip-link" href="#main-content" data-i18n="nav.skip">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="./index.html" class="logo"
+          ><img
+            src="./image/wanderlust.png"
+            alt="Wanderlust logo" data-i18n-attr="alt:common.logoAlt"
+            width="32"
+            height="32"
+          />Wanderlust <span>World</span></a
+        >
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation" data-i18n-attr="aria-label:nav.main">
+          <ul>
+            <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="./eiffel-tower.html" data-i18n="nav.eiffel">Eiffel Tower</a></li>
+            <li><a href="./colosseum.html" data-i18n="nav.colosseum">Colosseum</a></li>
+            <li>
+              <a href="./machu-picchu.html" class="active" aria-current="page"
+                 data-i18n="nav.machu">Machu Picchu</a
+              >
+            </li>
+            <li><a href="./taj-mahal.html" data-i18n="nav.taj">Taj Mahal</a></li>
+            <li class="nav-account"><a href="./sign-in.html" data-i18n="nav.signIn">Sign in</a></li>
+            <li><a href="./booking.html" data-i18n="nav.flights">Book Flights</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="account-slot">
+            <a class="account-link" href="./sign-in.html" data-i18n="nav.signIn">Sign in</a>
+          </div>
+          <div
+            class="lang-switch"
+            role="group"
+            aria-label="Language"
+            data-i18n-attr="aria-label:lang.group"
+          >
+            <button type="button" data-set-lang="en" aria-pressed="true">
+              EN
+            </button>
+            <button
+              type="button"
+              data-set-lang="zh-HK"
+              lang="zh-HK"
+              aria-pressed="false"
+            >
+              繁
+            </button>
+          </div>
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch color theme"
+            title="Switch color theme"
+          >
+            <img
+              class="theme-icon theme-icon-moon"
+              src="./image/icons/moon.svg"
+              alt=""
+              width="18"
+              height="18"
+            />
+            <img
+              class="theme-icon theme-icon-sun"
+              src="./image/icons/sun.svg"
+              alt=""
+              width="18"
+              height="18"
+            />
+            <span class="sr-only">Switch color theme</span>
+          </button>
+          <button
+            class="hamburger-btn"
+            type="button"
+            aria-label="Open navigation" data-i18n-attr="aria-label:nav.open"
+            aria-controls="main-nav"
+            aria-expanded="false"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main-content">
+      <section
+        class="attraction-hero cinematic-hero"
+        aria-labelledby="attraction-title"
+      >
+        <div class="hero-media">
+          <picture
+            ><source
+              media="(max-width: 767px)"
+              srcset="./image/optimized/machu-picchu-mobile.webp" />
+            <img
+              src="./image/optimized/machu-picchu.webp"
+              alt="Machu Picchu in Peru" data-i18n-attr="alt:machu.heroAlt"
+              width="1600"
+              height="1067"
+              fetchpriority="high"
+              srcset="
+                ./image/optimized/machu-picchu-800.webp  800w,
+                ./image/optimized/machu-picchu.webp     1600w
+              "
+              sizes="100vw"
+          /></picture>
+        </div>
+        <div class="hero-content">
+          <p class="hero-location" data-i18n="place.peruAndes">Peru · Andes</p>
+          <h1 id="attraction-title" data-i18n="nav.machu">Machu Picchu</h1>
+          <p data-i18n="home.machuTitle">History above the clouds.</p>
+          <a class="btn btn-white" href="#history"
+            ><span data-i18n="guide.exploreHistory">Explore the history</span> <span aria-hidden="true">↘</span></a
+          >
+        </div>
+      </section>
+      <div class="guide-layout container" id="history">
+        <article class="guide-story">
+          <h2 data-i18n="machu.historyTitle">History of Machu Picchu</h2>
+          <p data-i18n="machu.intro">
+            Machu Picchu is one of the most spectacular archaeological sites in
+            the world. Nestled high in the Andes at about 2,430 metres above sea
+            level, this 15th-century Inca citadel remains remarkably well
+            preserved.
+          </p>
+
+          <div class="history-block">
+            <h3 data-i18n="machu.incaTitle">Built by the Inca Empire</h3>
+            <p data-i18n="machu.inca">
+              Most historians believe Machu Picchu was built around 1450 during
+              the reign of emperor Pachacuti Inca Yupanqui. It was likely a
+              royal estate or sacred centre rather than a purely defensive
+              fortress. The site contains about 200 structures, including
+              temples, residences, storage buildings, and agricultural terraces.
+            </p>
+          </div>
+
+          <h3 data-i18n="machu.engTitle">Inca Engineering Marvel</h3>
+          <p data-i18n="machu.eng">
+            The Incas were master stonemasons. Stones were cut and fitted so
+            precisely that many walls still stand without mortar. The city shows
+            advanced knowledge of astronomy, hydrology, and earthquake-resistant
+            construction. Stone aqueducts channelled water, and terraces
+            prevented landslides while maximising farmland.
+          </p>
+
+          <h3 data-i18n="machu.foundTitle">Abandonment &amp; Rediscovery</h3>
+          <p data-i18n="machu.found">
+            Machu Picchu was abandoned around the mid-16th century, near the
+            time of the Spanish conquest. The conquistadors never found it. In
+            1911, American explorer Hiram Bingham, guided by local farmers,
+            brought the site to international attention. It became a UNESCO
+            World Heritage Site in 1983.
+          </p>
+        </article>
+        <aside class="guide-facts">
+          <div class="facts-heading">
+            <h2 data-i18n="guide.facts">Quick Facts</h2>
+          </div>
+          <ul
+            class="fact-list"
+            id="facts-list"
+            tabindex="0"
+            aria-label="Quick facts" data-i18n-attr="aria-label:guide.factsLabel"
+          >
+            <li><strong data-i18n="guide.country">Country</strong><span data-i18n="machu.factCountry">Peru</span></li>
+            <li><strong data-i18n="guide.region">Region</strong><span data-i18n="machu.factRegion">Cusco, Andes</span></li>
+            <li><strong data-i18n="guide.built">Built</strong><span data-i18n="machu.factBuilt">≈ 1450 AD</span></li>
+            <li><strong data-i18n="guide.elevation">Elevation</strong><span data-i18n="machu.factElevation">2,430 metres</span></li>
+            <li><strong data-i18n="guide.builtBy">Built by</strong><span data-i18n="machu.factBuiltBy">Inca Empire</span></li>
+            <li><strong data-i18n="guide.rediscovered">Rediscovered</strong><span data-i18n="machu.factFound">1911 (Hiram Bingham)</span></li>
+            <li><strong data-i18n="guide.unesco">UNESCO Status</strong><span data-i18n="machu.factUnesco">World Heritage (1983)</span></li>
+            <li><strong data-i18n="guide.structures">Structures</strong><span data-i18n="machu.factStructures">≈ 200 buildings</span></li>
+          </ul>
+        </aside>
+      </div>
+      <section
+        class="guide-highlights container"
+        aria-label="Visitor highlights" data-i18n-attr="aria-label:guide.highlights"
+      >
+        <div class="info-grid">
+          <div class="info-box">
+            <h4 data-i18n="guide.photos">Best Photo Spots</h4>
+            <p data-i18n="machu.photos">
+              The classic Guardhouse viewpoint, the agricultural terraces at
+              sunrise, and the Temple of the Sun area on clearer days.
+            </p>
+          </div>
+          <div class="info-box">
+            <h4 data-i18n="machu.altitudeTitle">Altitude Advice</h4>
+            <p data-i18n="machu.altitude">
+              Cusco sits at 3,400 m. Spend 1-2 days acclimatising before
+              visiting Machu Picchu to reduce altitude sickness risk.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section
+        class="photo-section"
+        data-gallery
+        aria-label="Machu Picchu photo gallery" data-i18n-attr="aria-label:machu.galleryLabel"
+      >
+        <div class="gallery-toolbar container">
+          <h2 data-i18n="guide.closer">A closer look.</h2>
+          <div class="gallery-controls">
+            <span class="gallery-count" aria-live="polite">1 / 5</span
+            ><button
+              type="button"
+              class="gallery-prev"
+              aria-label="Previous photograph" data-i18n-attr="aria-label:media.prev"
+            >
+              ←</button
+            ><button
+              type="button"
+              class="gallery-next"
+              aria-label="Next photograph" data-i18n-attr="aria-label:media.next"
+            >
+              →
+            </button>
+          </div>
+        </div>
+        <div
+          class="gallery-viewport"
+          tabindex="0"
+          aria-label="Photographs, use arrow keys to browse" data-i18n-attr="aria-label:media.browse"
+        >
+          <div class="gallery-track">
+            <figure class="gallery-slide">
+              <img
+                src="./image/optimized/machu-picchu.webp"
+                alt="Lost City of the Incas" data-i18n-attr="alt:machu.g1Alt"
+                loading="lazy"
+                width="1200"
+                height="800"
+                srcset="
+                  ./image/optimized/machu-picchu-800.webp  800w,
+                  ./image/optimized/machu-picchu.webp     1600w
+                "
+                sizes="(min-width: 1024px) 76vw, 100vw"
+              />
+              <figcaption>
+                <h4 data-i18n="machu.g1Title">Lost City of the Incas</h4>
+                <p data-i18n="machu.g1">
+                  Built around 1450 and unknown to the Spanish conquistadors.
+                </p>
+              </figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img
+                src="./image/optimized/machu-2.webp"
+                alt="Mountain Citadel" data-i18n-attr="alt:machu.g2Alt"
+                loading="lazy"
+                width="1200"
+                height="800"
+                srcset="
+                  ./image/optimized/machu-2-800.webp  800w,
+                  ./image/optimized/machu-2.webp     1200w
+                "
+                sizes="(min-width: 1024px) 76vw, 100vw"
+              />
+              <figcaption>
+                <h4 data-i18n="machu.g2Title">Mountain Citadel</h4>
+                <p data-i18n="machu.g2">Terraces and temples cling to a ridge high in the Andes.</p>
+              </figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img
+                src="./image/optimized/machu-3.webp"
+                alt="Andean Engineering" data-i18n-attr="alt:machu.g3Alt"
+                loading="lazy"
+                width="1200"
+                height="800"
+                srcset="
+                  ./image/optimized/machu-3-800.webp  800w,
+                  ./image/optimized/machu-3.webp     1200w
+                "
+                sizes="(min-width: 1024px) 76vw, 100vw"
+              />
+              <figcaption>
+                <h4 data-i18n="machu.g3Title">Andean Engineering</h4>
+                <p data-i18n="machu.g3">Precision stonework still stands without mortar.</p>
+              </figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img
+                src="./image/optimized/machu-4.webp"
+                alt="Misty Mornings" data-i18n-attr="alt:machu.g4Alt"
+                loading="lazy"
+                width="1200"
+                height="800"
+                srcset="
+                  ./image/optimized/machu-4-800.webp  800w,
+                  ./image/optimized/machu-4.webp     1200w
+                "
+                sizes="(min-width: 1024px) 76vw, 100vw"
+              />
+              <figcaption>
+                <h4 data-i18n="machu.g4Title">Misty Mornings</h4>
+                <p data-i18n="machu.g4">Cloud forests often wrap the ruins in soft morning mist.</p>
+              </figcaption>
+            </figure>
+            <figure class="gallery-slide">
+              <img
+                src="./image/optimized/machu-5.webp"
+                alt="High-Altitude Wonder" data-i18n-attr="alt:machu.g5Alt"
+                loading="lazy"
+                width="1200"
+                height="800"
+                srcset="
+                  ./image/optimized/machu-5-800.webp  800w,
+                  ./image/optimized/machu-5.webp     1071w
+                "
+                sizes="(min-width: 1024px) 76vw, 100vw"
+              />
+              <figcaption>
+                <h4 data-i18n="machu.g5Title">High-Altitude Wonder</h4>
+                <p data-i18n="machu.g5">Acclimatise in Cusco before ascending to 2,430 m.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <div class="guide-practical container">
+        <div class="book-cta">
+          <p>
+            <strong data-i18n="machu.fly">Fly to Lima for Machu Picchu</strong><span data-i18n="guide.searchHk">Search sample flights from Hong Kong.</span></p>
+          <a href="./booking.html?to=machu-picchu" class="btn" data-i18n="guide.book">Book a flight</a>
+        </div>
+        <div class="tips-section reveal">
+          <h3 data-i18n="guide.tips">Travel Tips for Visitors</h3>
+          <ul class="tips-list">
+            <li>
+              <strong data-i18n="guide.tipTime">Best time:</strong> <span data-i18n="machu.tipTime">Dry season (May-September) for clearer views. June-August is busiest.</span></li>
+            <li>
+              <strong data-i18n="guide.tipTickets">Tickets:</strong> <span data-i18n="machu.tipTickets">Limited daily entries, book early and choose your circuit in advance.</span></li>
+            <li>
+              <strong data-i18n="guide.tipThere">Getting there:</strong> <span data-i18n="machu.tipThere">Fly or bus to Cusco, train to Aguas Calientes, then a short bus to the entrance.</span></li>
+            <li>
+              <strong data-i18n="guide.tipDuration">Duration:</strong> <span data-i18n="machu.tipDuration">A full day from Cusco is common; overnight in Aguas Calientes is more relaxed.</span></li>
+            <li>
+              <strong data-i18n="guide.tipBring">What to bring:</strong> <span data-i18n="machu.tipBring">Passport (required), hiking shoes, rain jacket, sunscreen, water, and snacks.</span></li>
+            <li>
+              <strong data-i18n="guide.tipLocal">Local tip:</strong> <span data-i18n="machu.tipLocal">The Inca Trail needs booking months ahead; shorter alternative treks are also excellent.</span></li>
+          </ul>
+        </div>
+        <div class="video-section reveal">
+          <h3 data-i18n="machu.videoTitle">Watch a Video about Machu Picchu</h3>
+          <p data-i18n="guide.filmIntro">Learn more about this landmark with the film below:</p>
+          <div class="video-container">
+            <button
+              class="video-poster"
+              type="button"
+              aria-label="Play the documentary" data-i18n-attr="aria-label:media.play"
+            >
+              <img
+                src="./image/optimized/machu-picchu-800.webp"
+                alt=""
+                width="800"
+                height="530"
+                loading="lazy"
+              /><span data-i18n="media.playLabel">▶ Play documentary</span>
+            </button>
+            <div class="embed-loading" hidden role="status">
+              <div class="orb-loader" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <p data-i18n="media.loading">Loading the documentary...</p>
+              <a
+                class="embed-fallback text-link"
+                href="https://www.youtube.com/watch?v=Imzu3vTMOUo"
+                target="_blank"
+                rel="noopener"
+                hidden
+                 data-i18n="media.youtube">Open on YouTube ↗</a
+              >
+            </div>
+            <iframe
+              hidden
+              data-src="https://www.youtube.com/embed/Imzu3vTMOUo"
+              title="Machu Picchu Documentary" data-i18n-attr="title:machu.iframe"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+              loading="lazy"
+              width="960"
+              height="540"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe
+            ><noscript
+              ><iframe
+                src="https://www.youtube.com/embed/Imzu3vTMOUo"
+                title="Machu Picchu Documentary" data-i18n-attr="title:machu.iframe"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+                width="960"
+                height="540"
+                referrerpolicy="strict-origin-when-cross-origin"
+              ></iframe
+            ></noscript>
+          </div>
+        </div>
+      </div>
+      <section class="more-destinations container">
+        <h2 data-i18n="guide.where">Where next?</h2>
+        <ul class="related-list">
+          <li>
+            <a href="./eiffel-tower.html"
+              ><img
+                src="./image/optimized/eiffel-tower.webp"
+                alt=""
+                srcset="
+                  ./image/optimized/eiffel-tower-800.webp  800w,
+                  ./image/optimized/eiffel-tower.webp     1600w
+                "
+                sizes="(min-width: 1024px) 60vw, 100vw"
+              /><span data-i18n="nav.eiffel">Eiffel Tower</span></a
+            >
+          </li>
+          <li>
+            <a href="./colosseum.html"
+              ><img
+                src="./image/optimized/colosseum.webp"
+                alt=""
+                srcset="
+                  ./image/optimized/colosseum-800.webp  800w,
+                  ./image/optimized/colosseum.webp     1600w
+                "
+                sizes="(min-width: 1024px) 60vw, 100vw"
+              /><span data-i18n="nav.colosseum">Colosseum</span></a
+            >
+          </li>
+          <li>
+            <a href="./taj-mahal.html"
+              ><img
+                src="./image/optimized/taj-mahal.webp"
+                alt=""
+                srcset="
+                  ./image/optimized/taj-mahal-800.webp  800w,
+                  ./image/optimized/taj-mahal.webp     1600w
+                "
+                sizes="(min-width: 1024px) 60vw, 100vw"
+              /><span data-i18n="nav.taj">Taj Mahal</span></a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="footer-brand">Wanderlust <span>World</span></div>
+          <p data-i18n="footer.blurb">
+            Discover remarkable places through their history, culture and the
+            journeys that take you there.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="footer.destinations">Destinations</h3>
+          <ul>
+            <li><a href="./eiffel-tower.html" data-i18n="nav.eiffel">Eiffel Tower</a></li>
+            <li><a href="./colosseum.html" data-i18n="nav.colosseum">Colosseum</a></li>
+            <li><a href="./machu-picchu.html" data-i18n="nav.machu">Machu Picchu</a></li>
+            <li><a href="./taj-mahal.html" data-i18n="nav.taj">Taj Mahal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="footer.explore">Explore</h3>
+          <ul>
+            <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="./index.html#destinations" data-i18n="footer.featured">Featured Places</a></li>
+            <li><a href="./booking.html" data-i18n="nav.flights">Book Flights</a></li>
+            <li><a href="./itinerary.html" data-i18n="nav.itinerary">My Itinerary</a></li>
+            <li><a href="./terms.html" data-i18n="footer.terms">Terms and Conditions</a></li>
+            <li><a href="./index.html#plan" data-i18n="home.planLink">Plan Your Trip</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">&copy; 2026 Wanderlust World · All the world is my home.</p>
+        <a href="#top" data-i18n="footer.top">Back to top ↑</a>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top" data-i18n-attr="aria-label:footer.topLabel" hidden>
+      ↑
+    </button>
+    <script src="./js/vendor/gsap.min.js" defer></script>
+    <script src="./js/vendor/ScrollTrigger.min.js" defer></script>
+    <script src="./js/vendor/thinking-orbs.min.js" defer></script>
+    <script src="./js/orbs.js?v=20261014-1" defer></script>
+    <script src="./js/accounts.js?v=20261014-1" defer></script>
+    <script src="./js/i18n.js?v=20261014-1" defer></script>
+    <script src="./js/script.js?v=20261014-1" defer></script>
+  </body>
+</html>

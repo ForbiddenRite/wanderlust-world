@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Trips confirmed with your Wanderlust World account on this device."
+      data-i18n-attr="content:itinerary.metaDescription"
+    />
+    <title data-i18n="itinerary.metaTitle">My Itinerary | Wanderlust World</title>
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="./image/wanderlust.png" type="image/png" />
+    <script src="./js/theme.js"></script>
+    <script src="./js/lang.js"></script>
+    <link rel="stylesheet" href="./css/styles.css?v=20261014-9" />
+  </head>
+  <body id="top" class="page-itinerary">
+    <a class="skip-link" href="#main-content" data-i18n="nav.skip">Skip to content</a>
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="./index.html" class="logo"
+          ><img
+            src="./image/wanderlust.png"
+            alt="Wanderlust logo"
+            data-i18n-attr="alt:common.logoAlt"
+            width="32"
+            height="32"
+          />Wanderlust <span>World</span></a
+        >
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation" data-i18n-attr="aria-label:nav.main">
+          <ul>
+            <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="./eiffel-tower.html" data-i18n="nav.eiffel">Eiffel Tower</a></li>
+            <li><a href="./colosseum.html" data-i18n="nav.colosseum">Colosseum</a></li>
+            <li><a href="./machu-picchu.html" data-i18n="nav.machu">Machu Picchu</a></li>
+            <li><a href="./taj-mahal.html" data-i18n="nav.taj">Taj Mahal</a></li>
+            <li class="nav-account"><a href="./sign-in.html" data-i18n="nav.signIn">Sign in</a></li>
+            <li><a href="./booking.html" data-i18n="nav.flights">Book Flights</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <div class="account-slot">
+            <a class="account-link" href="./sign-in.html" data-i18n="nav.signIn">Sign in</a>
+          </div>
+          <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.group">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="zh-HK" lang="zh-HK" aria-pressed="false">繁</button>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+            <img class="theme-icon theme-icon-moon" src="./image/icons/moon.svg" alt="" width="18" height="18" />
+            <img class="theme-icon theme-icon-sun" src="./image/icons/sun.svg" alt="" width="18" height="18" />
+            <span class="sr-only">Switch color theme</span>
+          </button>
+          <button class="hamburger-btn" type="button" aria-label="Open navigation" data-i18n-attr="aria-label:nav.open" aria-controls="main-nav" aria-expanded="false">
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main-content" class="account-main container">
+      <div class="itinerary-toolbar">
+        <div>
+          <h1 data-i18n="itinerary.title">My Itinerary</h1>
+          <p data-i18n="itinerary.lead">Confirmed trips saved to your account on this device.</p>
+          <p id="itinerary-count" class="itinerary-count" hidden></p>
+        </div>
+        <div class="itinerary-actions">
+          <a class="btn" id="itinerary-book" href="./booking.html" hidden data-i18n="itinerary.book">Book a flight</a>
+          <button type="button" class="btn btn-quiet" id="itinerary-signout" hidden data-sign-out data-i18n="nav.signOut">Sign out</button>
+        </div>
+      </div>
+      <section id="itinerary-gate" class="itinerary-empty" hidden>
+        <h2 data-i18n="itinerary.gateTitle">Sign in to see your trips</h2>
+        <p data-i18n="itinerary.gateBody">My Itinerary keeps the flights you confirm as a member.</p>
+        <div class="itinerary-actions">
+          <a class="btn" href="./sign-in.html?next=itinerary.html" data-i18n="nav.signIn">Sign in</a>
+          <a class="btn btn-quiet" href="./sign-up.html?next=itinerary.html" data-i18n="nav.signUp">Create an account</a>
+        </div>
+      </section>
+      <section id="itinerary-empty" class="itinerary-empty" hidden>
+        <h2 data-i18n="itinerary.emptyTitle">No trips saved yet</h2>
+        <p data-i18n="itinerary.emptyBody">Search a flight, choose a fare, and continue as a member. Confirmed trips appear here.</p>
+        <div class="itinerary-actions">
+          <a class="btn" href="./booking.html" data-i18n="itinerary.book">Book a flight</a>
+        </div>
+      </section>
+      <div id="itinerary-list" class="trip-list"></div>
+    </main>
+    <noscript>
+      <p class="no-results" data-i18n="booking.noscript">Enable JavaScript to search the flights and try the booking form.</p>
+    </noscript>
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-col">
+          <div class="footer-brand">Wanderlust <span>World</span></div>
+          <p data-i18n="footer.blurb">Discover remarkable places through their history, culture and the journeys that take you there.</p>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="footer.destinations">Destinations</h3>
+          <ul>
+            <li><a href="./eiffel-tower.html" data-i18n="nav.eiffel">Eiffel Tower</a></li>
+            <li><a href="./colosseum.html" data-i18n="nav.colosseum">Colosseum</a></li>
+            <li><a href="./machu-picchu.html" data-i18n="nav.machu">Machu Picchu</a></li>
+            <li><a href="./taj-mahal.html" data-i18n="nav.taj">Taj Mahal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3 data-i18n="footer.explore">Explore</h3>
+          <ul>
+            <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="./index.html#destinations" data-i18n="footer.featured">Featured Places</a></li>
+            <li><a href="./booking.html" data-i18n="nav.flights">Book Flights</a></li>
+            <li><a href="./itinerary.html" aria-current="page" data-i18n="nav.itinerary">My Itinerary</a></li>
+            <li><a href="./terms.html" data-i18n="footer.terms">Terms and Conditions</a></li>
+            <li><a href="./index.html#plan" data-i18n="home.planLink">Plan Your Trip</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copy">&copy; 2026 Wanderlust World · All the world is my home.</p>
+        <a href="#top" data-i18n="footer.top">Back to top ↑</a>
+      </div>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Back to top" data-i18n-attr="aria-label:footer.topLabel" hidden>↑</button>
+    <script src="./js/accounts.js?v=20261014-1" defer></script>
+    <script src="./js/i18n.js?v=20261014-1" defer></script>
+    <script src="./js/script.js?v=20261014-1" defer></script>
+  </body>
+</html>

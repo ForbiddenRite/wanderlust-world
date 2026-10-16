@@ -1,0 +1,125 @@
+/* Screen slide between sign-in (left) and sign-up (right).
+   Header stays fixed; only #main-content moves. */
+@view-transition {
+  navigation: auto;
+}
+
+:root {
+  --auth-slide-duration: 0.38s;
+  --auth-slide-ease: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.page-sign-in .site-header,
+.page-sign-up .site-header {
+  view-transition-name: auth-header;
+}
+.page-sign-in #main-content,
+.page-sign-up #main-content {
+  view-transition-name: auth-main;
+}
+.page-sign-in footer,
+.page-sign-up footer {
+  view-transition-name: auth-footer;
+}
+
+@keyframes auth-out-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes auth-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes auth-out-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+@keyframes auth-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+html:active-view-transition-type(auth-forward)::view-transition-old(root),
+html:active-view-transition-type(auth-forward)::view-transition-new(root),
+html:active-view-transition-type(auth-back)::view-transition-old(root),
+html:active-view-transition-type(auth-back)::view-transition-new(root) {
+  animation: none;
+}
+html:active-view-transition-type(auth-forward)::view-transition-group(auth-header),
+html:active-view-transition-type(auth-forward)::view-transition-group(auth-footer),
+html:active-view-transition-type(auth-back)::view-transition-group(auth-header),
+html:active-view-transition-type(auth-back)::view-transition-group(auth-footer) {
+  animation-duration: 0ms;
+}
+html:active-view-transition-type(auth-forward)::view-transition-old(auth-main),
+html:active-view-transition-type(auth-forward)::view-transition-new(auth-main),
+html:active-view-transition-type(auth-back)::view-transition-old(auth-main),
+html:active-view-transition-type(auth-back)::view-transition-new(auth-main) {
+  mix-blend-mode: normal;
+  height: 100%;
+  width: 100%;
+}
+html:active-view-transition-type(auth-forward)::view-transition-group(auth-main),
+html:active-view-transition-type(auth-back)::view-transition-group(auth-main) {
+  background: var(--bg);
+}
+html:active-view-transition-type(auth-forward)::view-transition-old(auth-main) {
+  animation: var(--auth-slide-duration) var(--auth-slide-ease) both auth-out-left;
+}
+html:active-view-transition-type(auth-forward)::view-transition-new(auth-main) {
+  animation: var(--auth-slide-duration) var(--auth-slide-ease) both auth-in-right;
+}
+html:active-view-transition-type(auth-back)::view-transition-old(auth-main) {
+  animation: var(--auth-slide-duration) var(--auth-slide-ease) both auth-out-right;
+}
+html:active-view-transition-type(auth-back)::view-transition-new(auth-main) {
+  animation: var(--auth-slide-duration) var(--auth-slide-ease) both auth-in-left;
+}
+
+html.auth-leave-forward,
+html.auth-leave-back,
+html.auth-enter-forward,
+html.auth-enter-back {
+  overflow-x: hidden;
+}
+html.auth-leave-forward #main-content {
+  animation: auth-out-left var(--auth-slide-duration) var(--auth-slide-ease) both;
+}
+html.auth-leave-back #main-content {
+  animation: auth-out-right var(--auth-slide-duration) var(--auth-slide-ease) both;
+}
+html.auth-enter-forward #main-content {
+  animation: auth-in-right var(--auth-slide-duration) var(--auth-slide-ease) both;
+}
+html.auth-enter-back #main-content {
+  animation: auth-in-left var(--auth-slide-duration) var(--auth-slide-ease) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:active-view-transition-type(auth-forward)::view-transition-old(auth-main),
+  html:active-view-transition-type(auth-forward)::view-transition-new(auth-main),
+  html:active-view-transition-type(auth-back)::view-transition-old(auth-main),
+  html:active-view-transition-type(auth-back)::view-transition-new(auth-main),
+  html.auth-leave-forward #main-content,
+  html.auth-leave-back #main-content,
+  html.auth-enter-forward #main-content,
+  html.auth-enter-back #main-content {
+    animation: none;
+  }
+}
